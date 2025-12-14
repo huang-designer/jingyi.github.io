@@ -1,32 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页 - 网站首页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", sans-serif;
+        }
+        body {
+            background-color: #f8f8f8;
+        }
+        /* 顶部导航栏 */
+        .top-nav {
+            background-color: #fff3c4; /* 浅黄色背景 */
+            padding: 10px 20px;
+            text-align: right;
+        }
+        .top-nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+        }
+        .top-nav a:hover {
+            color: #ff9900;
+        }
+        /* 横幅图 */
+        .banner {
+            width: 100%;
+            height: 200px;
+            background: url("images/banner.jpg") no-repeat center;
+            background-size: cover;
+        }
+        /* 主体内容 */
+        .container {
+            width: 1000px;
+            margin: 20px auto;
+            display: flex;
+            gap: 20px;
+        }
+        /* 左侧“关于我” */
+        .about-me {
+            width: 30%;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .about-me h2 {
+            background-color: #fff3c4;
+            padding: 10px;
+            border-radius: 5px 5px 0 0;
+            font-size: 18px;
+        }
+        .about-me .avatar {
+            text-align: center;
+            padding: 20px;
+        }
+        .about-me .avatar img {
+            width: 120px;
+            border-radius: 5px;
+        }
+        .about-me .info {
+            padding: 0 20px 20px;
+            line-height: 2;
+            font-size: 14px;
+        }
+        /* 右侧“个人简介” */
+        .intro {
+            width: 70%;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .intro h2 {
+            background-color: #fff3c4;
+            padding: 10px;
+            border-radius: 5px 5px 0 0;
+            font-size: 18px;
+        }
+        .intro .pics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 20px;
+        }
+        .intro .pics img {
+            width: 22%;
+            border-radius: 5px;
+        }
+        .intro .text {
+            padding: 0 20px 20px;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+        /* 页脚 */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #fff3c4;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Hi, I'm Your Name</h1>
-    <p>Welcome to my GitHub Page!</p>
-  </header>
+    <!-- 顶部导航 -->
+    <div class="top-nav">
+        <a href="index.html">网站首页</a>
+        <a href="hobby.html">生活爱好</a>
+        <a href="hometown.html">我的家乡</a>
+        <a href="photos.html">照片墙</a>
+        <a href="message.html">留言交流</a>
+    </div>
 
-  <section>
-    <h2>About Me</h2>
-    <p>Brief introduction about yourself.</p>
-  </section>
+    <!-- 横幅图 -->
+    <div class="banner"></div>
 
-  <section>
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="link_to_your_project">Project 1</a></li>
-      <li><a href="link_to_your_project">Project 2</a></li>
-    </ul>
-  </section>
+    <!-- 主体内容 -->
+    <div class="container">
+        <!-- 左侧：关于我 -->
+        <div class="about-me">
+            <h2>关于我</h2>
+            <div class="avatar">
+                <img src="images/cat.png" alt="头像">
+            </div>
+            <div class="info">
+                <p>姓名：张三</p>
+                <p>性别：男</p>
+                <p>学校：某某大学</p>
+                <p>专业：计算机科学与技术</p>
+                <p>联系方式：123-4567-8910</p>
+                <p>邮箱：example@email.com</p>
+                <p>兴趣爱好：编程、摄影、旅行</p>
+            </div>
+        </div>
 
-  <footer>
-    <p>Find me on <a href="your_social_link">LinkedIn</a></p>
-  </footer>
+        <!-- 右侧：个人简介 -->
+        <div class="intro">
+            <h2>个人简介</h2>
+            <div class="pics">
+                <img src="images/cat.png" alt="图1">
+                <img src="images/scenery.jpg" alt="图2">
+                <img src="images/dog.jpg" alt="图3">
+                <img src="images/bunny.png" alt="图4">
+            </div>
+            <div class="text">
+                <p>大家好，我是张三，来自美丽的江南水乡。目前就读于某某大学计算机科学与技术专业，是一名大三学生，热爱编程，尤其对前端开发和用户体验设计有着浓厚的兴趣。</p>
+                <p>在校期间，我积极参与各类技术活动和项目实践，曾担任校园程序员协会干事，作为项目负责人，我带领团队开发了校园二手交易平台，获得了师生的一致好评。这段经历不仅提升了我的技术能力，也培养了我的团队协作和项目管理能力。</p>
+                <p>课余时间，我热衷于摄影和旅行，通过旅行学会了用不同的视角观察世界，旅行则拓宽了我的视野，这不仅丰富了我的生活，也为我的设计工作提供了灵感源泉。我相信，一个好的开发者不仅需要技术能力，还需要对生活有深刻的理解。</p>
+                <p>我期望自己能成为一名全栈工程师，目前正在深入学习React和Node.js技术，我期待将技术转化为创意，曾通过实践接触过HTML和CSS，这个个人主页就是我用HTML+CSS动手实现的，后续我还会用JavaScript为它添加更多交互功能。</p>
+                <p>希望通过这个个人主页，能和更多志同道合的朋友交流学习，如果您对我的经历或作品感兴趣，欢迎通过留言交流页面与我联系，我也很乐意分享我的学习经验和心得。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        个人主页 | 设计者：张三
+    </footer>
 </body>
 </html>
